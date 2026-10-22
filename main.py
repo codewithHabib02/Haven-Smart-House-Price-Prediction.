@@ -109,7 +109,10 @@ app = FastAPI(
 
 configured_origins = os.getenv(
     "FRONTEND_ORIGIN",
-    "http://localhost:5173,http://127.0.0.1:5173",
+    "http://localhost:5173,http://127.0.0.1:5173,configured_origins = os.getenv(
+    "FRONTEND_ORIGIN",
+    "http://localhost:5173,http://127.0.0.1:5173,https://haven-smart-house-price-prediction.mhabibulie02.workers.dev",
+)",
 )
 origins = [origin.strip().rstrip("/") for origin in configured_origins.split(",") if origin.strip()]
 app.add_middleware(
