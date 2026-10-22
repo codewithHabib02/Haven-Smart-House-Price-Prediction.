@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
 
 MODEL_PATH = Path(os.getenv("MODEL_PATH", str(BASE_DIR / "house.pkl"))).expanduser()
-DATABASE_PATH = Path(os.getenv("DATABASE_PATH","/var/data/predictions.db"))).expanduser()
+DATABASE_PATH = Path(os.getenv("DATABASE_PATH","/var/data/predictions.db")).expanduser()
 
 # These names and their order were inspected from the supplied trained pipeline.
 FEATURES = [
